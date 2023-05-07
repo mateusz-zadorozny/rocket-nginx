@@ -24,22 +24,22 @@ wp_content_folder = wp-content
 html_cache_control = "no-cache, no-store, must-revalidate"
 
 ; Cookies
-; Cookies can be specified to avoid serving a cached file. Some plugins may need to bypass the use of a
-; file that was previously cached. List all cookies that must invalidate the use of cache.
+; Cookies can be specified to avoid serving a cached file. Some plugins may nee$
+; file that was previously cached. List all cookies that must invalidate the us$
 ; The cookie name must contain the text value set.
-; Note that each value will be used in a REGEX. Make sure characters are escaped when needed.
+; Note that each value will be used in a REGEX. Make sure characters are escape$
 ; Example: cookie_invalidate[] = "wordpress_logged_in_"
 cookie_invalidate[] = "wordpress_logged_in_"
 cookie_invalidate[] = "wp\-postpass_"
-cookie_invalidate[] = "woocommerce_items_in_cart"
-cookie_invalidate[] = "woocommerce_cart_hash"
+;cookie_invalidate[] = "woocommerce_items_in_cart"
+;cookie_invalidate[] = "woocommerce_cart_hash"
 cookie_invalidate[] = "wptouch_switch_toogle"
 cookie_invalidate[] = "comment_author_"
 cookie_invalidate[] = "comment_author_email_"
 
 ; Query strings to ignore
-; Query strings invalidate the caching process made by Rocket-Nginx. But some strings are added, for instance,
-; for JavaScript and do not influence the output provided by the server. List all query strings that won't
+; Query strings invalidate the caching process made by Rocket-Nginx. But some s$
+; for JavaScript and do not influence the output provided by the server. List a$
 ; invalidate the use of a cached page.
 ; Reference: https://docs.wp-rocket.me/article/971-caching-query-strings
 query_string_ignore[] = "utm_source"
@@ -58,6 +58,13 @@ query_string_ignore[] = "age-verified"
 query_string_ignore[] = "ao_noptimize"
 query_string_ignore[] = "usqp"
 query_string_ignore[] = "cn-reloaded"
+
+; Custom strings by mpress.cc
+
+query_string_ignore[] = "ref"
+query_string_ignore[] = "epik"
+query_string_ignore[] = "pp"
+query_string_ignore[] = "ttclid"
 
 ; Query strings to cache
 ; Query strings invalidate the caching process made by Rocket-Nginx. Some strings may need to be cached.
